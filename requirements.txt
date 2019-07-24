@@ -4,3 +4,4 @@ scipy
 pandas
 flask
 flask_restful
+flask_cors
