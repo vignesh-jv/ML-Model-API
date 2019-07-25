@@ -1,4 +1,4 @@
-# Sentiment Classifier Deployed as a REST API using Flask
+# Sarcasm Classifier Deployed as a REST API using Flask
 
 * [Flask Restful Documentation]()
 ___
