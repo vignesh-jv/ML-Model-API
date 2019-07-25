@@ -31,26 +31,27 @@ class PredictSarcasm(Resource):
         # use parser and find the user's query
         args = parser.parse_args()
         user_query = args['query']
+        if user_query not None:
 
-        # vectorize the user's query and make a prediction
-        uq_vectorized = model.vectorizer_transform(np.array([user_query]))
-        #print(uq_vectorized)
-        prediction = model.predict(uq_vectorized)
-        pred_proba = model.predict_proba(uq_vectorized)
+            # vectorize the user's query and make a prediction
+            uq_vectorized = model.vectorizer_transform(np.array([user_query]))
+            #print(uq_vectorized)
+            prediction = model.predict(uq_vectorized)
+            pred_proba = model.predict_proba(uq_vectorized)
 
-        # Output either 'Not Sarcastic' or 'Sarcastic' along with the score
-        if prediction == 0:
-            pred_text = 'Not sarcastic'
-        else:
-            pred_text = 'Sarcastic'
+            # Output either 'Not Sarcastic' or 'Sarcastic' along with the score
+            if prediction == 0:
+                pred_text = 'Not sarcastic'
+            else:
+                pred_text = 'Sarcastic'
 
-        # round the predict proba value and set to new variable
-        confidence = round(pred_proba[0], 3)
+            # round the predict proba value and set to new variable
+            confidence = round(pred_proba[0], 3)
 
-        # create JSON object
-        output = {'prediction': pred_text, 'confidence': confidence}
+            # create JSON object
+            output = {'prediction': pred_text, 'confidence': confidence}
 
-        return output
+            return output
 
 
 # Setup the Api resource routing here
