@@ -31,7 +31,7 @@ class PredictSarcasm(Resource):
         # use parser and find the user's query
         args = parser.parse_args()
         user_query = args['query']
-        if user_query not None:
+        if user_query is not None:
 
             # vectorize the user's query and make a prediction
             uq_vectorized = model.vectorizer_transform(np.array([user_query]))
