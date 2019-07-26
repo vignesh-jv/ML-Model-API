@@ -49,3 +49,5 @@ pip install -r requirements.txt
 You will only have to install the `requirements.txt` when working with a new virtual environment.
 ### Links to setup and installations and rough drafts
 https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
+(Flask_Restful)[https://flask-restful.readthedocs.io/en/latest/installation.html]
+(Flask)[https://flask.palletsprojects.com/en/1.1.x/installation/]
