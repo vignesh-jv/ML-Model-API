@@ -47,3 +47,5 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 You will only have to install the `requirements.txt` when working with a new virtual environment.
+### Links to setup and installations and rough drafts
+https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
